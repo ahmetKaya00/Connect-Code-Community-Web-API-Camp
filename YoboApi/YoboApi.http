@@ -1,0 +1,6 @@
+@YoboApi_HostAddress = http://localhost:5286
+
+GET {{YoboApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
