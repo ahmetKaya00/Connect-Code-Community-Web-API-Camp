@@ -50,6 +50,16 @@ builder.Services.AddAuthentication(options =>
    }; 
 });
 
+builder.Services.AddCors(o =>
+{
+   o.AddDefaultPolicy(p=>
+    p.WithOrigins("http://localhost:5173")
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowCredentials()
+   ); 
+});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
